@@ -1,0 +1,26 @@
+.jawherr {
+    background-color: red; 
+    color: black; 
+    border: 2px solid #f44336;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 15px;
+}
+   
+  
+.jawherr:hover {
+background-color: #f44336;
+color: white;
+  }
+  .oi{
+font-size: 20px;
+  }
+  .om{
+    font-size: 20px;
+      }
+      .po{
+        font-size: 20px;
+          }
+          .lo{
+            font-size: 20px;
+              }

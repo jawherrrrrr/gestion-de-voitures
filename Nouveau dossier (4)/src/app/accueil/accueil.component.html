@@ -1,0 +1,49 @@
+<h1>Page d'accueil</h1>
+<div class="info">
+   <p><b> Bienvenue dans notre agence de location de voitures! <br>
+             
+   </b></p>
+</div>
+
+<!-- Formulaire d'ajout de voiture -->
+<div id="ajouterFormulaire">
+    <form action="/votre-endpoint-de-traitement" method="post">
+        <label for="login">Login:</label>
+        <input type="text" id="login" name="login" required>
+
+        <label for="nomVoiture">Nom de la voiture:</label>
+        <input type="text" id="nomVoiture" name="nomVoiture" required>
+
+        <label for="couleurVoiture">Couleur de la voiture:</label>
+        <input type="text" id="couleurVoiture" name="couleurVoiture" required>
+
+        <label for="modeleVoiture">Modèle de la voiture:</label>
+        <input type="text" id="modeleVoiture" name="modeleVoiture" required>
+
+        <label for="prixVoiture">Prix de la voiture:</label>
+        <input type="number" id="prixVoiture" name="prixVoiture" required>
+
+        <button type="submit">Envoyer</button>
+    </form>
+</div>
+
+<script>
+    function toggleForm() {
+        var formulaire = document.getElementById("ajouterFormulaire");
+        formulaire.style.display = (formulaire.style.display === "none" || formulaire.style.display === "") ? "block" : "none";
+    }
+</script>
+
+ <header class="joujou"> 
+  <div *ngFor="let voiture of voitures">
+
+<img class="slah" src="{{voiture.image}}" >
+<button class="hayet" routerLink="/details/{{voiture.id}}">Détails</button>
+  </div>
+
+ 
+
+  <router-outlet></router-outlet>
+
+</header>
+<button onclick="toggleForm()">Ajouter</button>
